@@ -7,20 +7,20 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-6">
-    <h1>Github Empleos</h1>
-    <h5>Selecciona parámetros de búsqueda</h5>
-    <form action="/users" method="POST">
+      <div class="col-6 d-flex justify-content-center">
+    <form action="/jobs" method="POST">
+      <h1>Github Empleos</h1>
+    <p>Selecciona parámetros de búsqueda</p> <br>
     <label>País</label><br>
-      <select name="select">
-        <option value="value1" selected disabled>Seleccione País</option> 
+      <select name="select" class='custom-select my-1 mr-sm-2'>
+        <option value="value1" selected disabled>...</option> 
         <option value="value2">Estados Unidos</option>
         <option value="value3">Canadá</option>
       </select>
       <br><br>
       <label>Afinidad</label><br>
-      <select name="select">
-        <option value="value1" selected disabled>Seleccione Afinidad</option> 
+      <select name="select" class='custom-select my-1 mr-sm-2'>
+        <option value="value1" selected disabled>...</option> 
         <option value="value2">Developer</option>
         <option value="value3">UX</option>
         <option value="value4">Python</option>
@@ -28,13 +28,17 @@
         <option value="value6">php</option>
       </select>
       <br><br>
-      <input type="submit" value="Buscar">
+      <input type="submit" value="Buscar"  class="btn btn-primary">
     </form>
   </div>
   
-    <div class="resultado col-6">
-      <div class="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
+    <div class="resultado col-6 d-flex justify-content-center">
+      <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Primary card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
       </div>
     </div>
   </div>
