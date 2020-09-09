@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Empleos Github</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-6">
+    <h1>Github Empleos</h1>
+    <h5>Selecciona parámetros de búsqueda</h5>
+    <form action="/users" method="POST">
+    <label>País</label><br>
+      <select name="select">
+        <option value="value1" selected disabled>Seleccione País</option> 
+        <option value="value2">Estados Unidos</option>
+        <option value="value3">Canadá</option>
+      </select>
+      <br><br>
+      <label>Afinidad</label><br>
+      <select name="select">
+        <option value="value1" selected disabled>Seleccione Afinidad</option> 
+        <option value="value2">Developer</option>
+        <option value="value3">UX</option>
+        <option value="value4">Python</option>
+        <option value="value5">Javascript</option>
+        <option value="value6">php</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+  
+    <div class="resultado col-6">
+      <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+      </div>
+    </div>
+  </div>
+    <script src="/jquery/jquery.js"></script>
+    <script src="/axios/axios.min.js"></script>
+    <script src="actions/actions.js"></script>  
+  </body>
+</html>
