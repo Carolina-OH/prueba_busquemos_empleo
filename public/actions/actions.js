@@ -20,7 +20,9 @@ function getdataJobs (type, location){
   .then((resp)=> {
     $("#jobsContainer").empty()
     var cantidad=resp.data.length
-    alert(`se encontraron ${cantidad} registros`)
+    $("#jobsCount").empty()
+    $("#jobsCount").append(`El total de registros encontrados es: ${cantidad}`)
+    //alert(`se encontraron ${cantidad} registros`)
     //como poner este alert como mensaje afuera, tengo que pushear el valor a una variable afuera y dpes llamar a esa variable?
     //que flojera... xd :C
   resp.data.forEach((job)=>{
