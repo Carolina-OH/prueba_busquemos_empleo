@@ -5,6 +5,8 @@ var afinidad= $("#afinidad").find(":selected").text();
 $(function () {
   $("#buscar").click(function (e) {
     e.preventDefault(); 
+    var pais = $("#pais").find(":selected").text();
+    var afinidad= $("#afinidad").find(":selected").text();
     console.log(afinidad , pais)
     getdataJobs(afinidad,pais)
   });
@@ -16,8 +18,14 @@ $(function () {
 function getdataJobs (type, location){
   axios.get(`${BASE_URL}description=${type}&location=${location}`)
   .then((resp)=> {
+    $("#jobsContainer").empty()
+    var cantidad=resp.data.length
+    alert(`se encontraron ${cantidad} registros`)
+    //como poner este alert como mensaje afuera, tengo que pushear el valor a una variable afuera y dpes llamar a esa variable?
+    //que flojera... xd :C
   resp.data.forEach((job)=>{
     desplegarInfo(job)
+
   })
   console.log(resp)
   })
@@ -31,10 +39,11 @@ function getdataJobs (type, location){
 function desplegarInfo(job){
   var despliege=
     `
-     <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
-        <div class="card-header">${job.location}</div>
+     <div class="card border-info mb-3" style="max-width: 100%;">
+        <div class="card-header">Location: ${job.location} </div>
         <div class="card-body">
-          <h5 class="card-title">Descripción</h5>
+          <h5 class="card-title">Company: ${job.company}</h5>
+          <p class="card-title">Description:</p>
           <p class="card-text">${job.description}</p>
         </div>
      </div>
