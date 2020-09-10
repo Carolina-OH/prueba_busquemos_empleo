@@ -38,6 +38,7 @@ app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 //axios
 app.use('/axios', express.static(__dirname + '/node_modules/axios/dist/'));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/jobs', jobsRouter)

@@ -1,3 +1,4 @@
+
 const BASE_URL="https://corsanywhere.herokuapp.com/https://jobs.github.com/positions.json?"
 var pais = $("#pais").find(":selected").text();
 var afinidad= $("#afinidad").find(":selected").text();
@@ -39,6 +40,7 @@ function getdataJobs (type, location){
 
 
 function desplegarInfo(job){
+  
   var despliege=
     `
      <div class="card border-info mb-3" style="max-width: 100%;">
@@ -47,7 +49,10 @@ function desplegarInfo(job){
           <h5 class="card-title">Company: ${job.company}</h5>
           <p class="card-title">Description:</p>
           <p class="card-text">${job.description}</p>
+          <hr>
+          <p class="card-text">${(job.created_at)}</p>
         </div>
+        
      </div>
       `
   $('#jobsContainer').append(despliege)
