@@ -31,7 +31,7 @@ function getdataJobs (type, location){
 function desplegarInfo(job){
   var despliege=
     `
-     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+     <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
         <div class="card-header">${job.location}</div>
         <div class="card-body">
           <h5 class="card-title">Descripción</h5>
